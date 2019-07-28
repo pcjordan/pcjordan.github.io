@@ -29,7 +29,8 @@
 }
 
 .texture-red {
-    background-image: url('{{ site.baseurl }}/assets/textures/red.jpg');
+    background-image: url('{{ site.baseurl }}/assets/banner.png');
+    background-size: cover;
 }
 
 .texture-purple {
