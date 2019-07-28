@@ -16,7 +16,7 @@ sass:
 permalink: /posts/:title/
 texture:
   title: Philip Jordan
-  tagline: Computer Science student on exchange at Princeton
+  tagline: Computer Science student trying to blog
   date_format: "%b %-d, %Y"
   style: red
   showNav: true
