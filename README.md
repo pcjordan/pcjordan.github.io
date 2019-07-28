@@ -17,3 +17,7 @@ $ bundle exec jekyll serve
 ```
 
 and the website should be accessible under http://localhost:4000.
+
+## Hosting via GitHub Pages
+
+In order to publish this blog via GitHub Pages, just rename this repository to `your_username.github.io` and push it onto your GitHub.
