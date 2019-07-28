@@ -22,6 +22,17 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
+
+permalink: /posts/:title/
+texture:
+  title: Philip Jordan
+  tagline: CS Student (ETH, Princeton)
+  date_format: "%b %-d, %Y"
+  style: black
+  showNav: false
+  showPicker: true
+
+
 # twitter_username: jekyllrb
 # github_username:  jekyll
 
