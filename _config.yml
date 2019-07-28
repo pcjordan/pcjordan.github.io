@@ -18,7 +18,7 @@ texture:
   title: Philip Jordan
   tagline: Computer Science student on exchange at Princeton
   date_format: "%b %-d, %Y"
-  style: yellow
+  style: red
   showNav: false
   showPicker: false
 
