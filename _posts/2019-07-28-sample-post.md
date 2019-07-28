@@ -9,11 +9,11 @@ This is the first paragraph of a sample post.
 
 ## Syntax
 
-Syntax is basically like markdown, refer to [Jekyll Documentation](https://jekyllrb.com/docs/) for details.
+Syntax is basically like markdown, refer to [Jekyll Documentation](https://jekyllrb.com/docs/){:target="_blank"} for details.
 
 ## Photos
 
-For including photos captured on the phone, use [Google Photos](https://photos.google.com) to back up those photos from your phone. Then click on share via link within Google Photos and use [this](https://ctrlq.org/google/photos/) awesome tool in order to extract the actual image's URL. Then, just link to the image using
+For including photos captured on the phone, use [Google Photos](https://photos.google.com){:target="_blank"} to back up those photos from your phone. Then click on share via link within Google Photos and use [this](https://ctrlq.org/google/photos/){:target="_blank"} awesome tool in order to extract the actual image's URL. Then, just link to the image using
 
 ```markdown
 ![alt-text](http://image-url.com)
