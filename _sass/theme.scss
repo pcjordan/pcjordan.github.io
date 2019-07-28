@@ -108,7 +108,7 @@ header {
 	}
 
 	@media screen and  (max-width: $mobileWidth) {
-		margin:0 15px; 
+		margin:0 15px;
 		div.highlighter-rouge {
 			right: 15px;
 		}
@@ -118,7 +118,7 @@ header {
 	}
 
 	@media screen and (max-width: $tabWidth) and (min-width: $mobileWidth){
-		margin:0 40px;	
+		margin:0 40px;
 		div.highlighter-rouge {
 			right: 40px;
 		}
@@ -225,6 +225,7 @@ header {
 	position: absolute;
 	top: 0;
 	right: 5vw;
+	display: flex;
 	a {
 		color: inherit;
 	}
