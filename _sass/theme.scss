@@ -10,6 +10,7 @@ $leftWidth: 220px;
 
 $gray: #999;
 $lightGray: #eee;
+$transparentBox: #00000088;
 
 *,*:before,*:after {
 	box-sizing: border-box;
@@ -103,7 +104,7 @@ header {
 	}
 
 	@media screen and (min-width: 1600px){
-		max-width: 1200px;
+		max-width: 800px;   // changed from 1200px
 	}
 
 	@media screen and  (max-width: $mobileWidth) {
@@ -145,6 +146,13 @@ header {
 			padding: 30px 100px;
 		}
 	}
+}
+
+// light transparent background for custom header background texture
+.custom-page-header {
+	background: $transparentBox;
+    border-radius: 1em;
+    padding: 1em;
 }
 
 .post-title {
@@ -225,11 +233,15 @@ header {
 	top: 0;
 	right: 5vw;
 	display: flex;
+
 	a {
 		color: inherit;
 	}
 	ul {
 		list-style-type: none;
+		background-color: $transparentBox;
+		padding: 0;
+
 		li {
 			// background-color: #ff9f1c;
 			border: 1px solid #fff;

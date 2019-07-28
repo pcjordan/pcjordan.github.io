@@ -28,9 +28,13 @@
     }
 }
 
-.texture-red {
-    background-image: url('{{ site.baseurl }}/assets/banner.png');
+.texture-custom {
+    background-image: url('{{ site.baseurl }}/assets/textures/custom.jpg');
     background-size: cover;
+}
+
+.texture-red {
+    background-image: url('{{ site.baseurl }}/assets/textures/red.jpg');
 }
 
 .texture-purple {

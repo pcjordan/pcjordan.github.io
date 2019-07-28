@@ -18,7 +18,7 @@ texture:
   tagline: Computer Science student trying to blog
   # minima date format, refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
   date_format: "%b %-d, %Y"
-  style: red
+  style: custom
   showNav: true
   showPicker: false
 
