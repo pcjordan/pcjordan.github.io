@@ -15,7 +15,7 @@ permalink: /posts/:title/
 
 texture:
   title: Philip's Blog
-  tagline: Computer Science student trying to blog
+  tagline: Title Yet To Be Found
   # minima date format, refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
   date_format: "%b %-d, %Y"
   style: custom
@@ -25,7 +25,7 @@ texture:
   # generate social links in footer
   social_links:
     email: 
-    telegram:  thelehhman
+    telegram: j_philip
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up

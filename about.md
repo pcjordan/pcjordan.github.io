@@ -3,6 +3,6 @@ layout: page
 title: About
 ---
 
-# About page
+# About
 
-This page tells you a little bit about me.
+This tells you very little about me.
