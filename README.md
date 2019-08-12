@@ -1,4 +1,4 @@
-# [Philip's Blog](http:://philip-jordan.github.io)
+# [Philip's Blog](http://philip-jordan.github.io)
 
 A personal blog built on [Jekyll](https://jekyllrb.com/) using the [Texture](https://github.com/thelehhman/texture) theme.
 
