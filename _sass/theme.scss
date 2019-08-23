@@ -12,12 +12,18 @@ $gray: #999;
 $lightGray: #eee;
 $transparentBox: #00000088;
 
+@font-face {
+	font-family: "Hoefler Text Regular";
+	src: url("Hoefler Text Regular.ttf");
+}
+
 *,*:before,*:after {
 	box-sizing: border-box;
 }
 
 body {
-	font-family: 'Nunito Sans', sans-serif;
+
+	font-family: 'Hoefler Text Regular';
 	@include fluidType(16px, 19px);
 	line-height: 1.55em;
 	margin: 0;
