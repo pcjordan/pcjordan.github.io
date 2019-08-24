@@ -1,40 +1,28 @@
-title: Philip's Blog
-author: Philip Jordan
-email: philip.jordan@web.de
-description: > # this means to ignore newlines until "show_exerpts:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-show_excerpts: true # set to true to show first paragraphs of blog entries
-remote_theme: thelehhman/texture
-
-sass:
-  sass_dir: _sass
-
-permalink: /posts/:title/
-
-texture:
-  title: Philip's Blog
-  tagline: Title Yet To Be Found
-  # minima date format, refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
-  date_format: "%b %-d, %Y"
-  style: custom
-  showNav: true
-  showPicker: false
-
-  # generate social links in footer
-  social_links:
-    email: 
-    telegram: j_philip
-
-# If you want to link only specific pages in your header, uncomment
-# this and add the path to the pages in order as they should show up
-#header_pages:
-# - about.md
-
-# Build settings
-# theme: texture
-
+title: Jekyll Twenty Nineteen
+tagline: Adaptation of WordPress theme
 plugins:
   - jekyll-seo-tag
-#  - jekyll-feed
+  - jekyll-feed
+  - jekyll-paginate
+paginate: 5
+navigation:
+  - url: /index.html
+    title: Home
+  - url: /contact.html
+    title: Contact
+disqus_shortname:
+google_analytics:
+contact_email:
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "default"
+      comments: true
