@@ -1,5 +1,6 @@
 title: Jekyll Twenty Nineteen
 tagline: Adaptation of WordPress theme
+url: https://pcjordan.github.io
 plugins:
   - jekyll-seo-tag
   - jekyll-feed
