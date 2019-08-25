@@ -10,7 +10,7 @@
 
     <div class="entry-content">
         {% if page.is_index %}
-            {{ post.excerpt | strip_html | truncatewords: 20 }}
+            {{ post.excerpt | strip_html | truncatewords: 32 }}
         {% else %}
             {{ content }}
         {% endif %}
