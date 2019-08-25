@@ -4183,7 +4183,7 @@ body.page .main-navigation {
 }
 
 .entry {
-    margin-top: calc(6 * 1rem);
+    margin-top: calc(4 * 1rem);
 }
 
 .entry:first-of-type {
@@ -4191,13 +4191,13 @@ body.page .main-navigation {
 }
 
 .entry .entry-header {
-    margin: calc(3 * 1rem) 1rem 1rem;
+    margin: 0 1rem 1rem;
     position: relative;
 }
 
 @media only screen and (min-width: 768px) {
     .entry .entry-header {
-        margin: calc(3 * 1rem) calc(10% + 60px) 1rem;
+        margin: 0 calc(10% + 60px) 1rem;
     }
 }
 
@@ -4992,7 +4992,7 @@ body.page .main-navigation {
 
 @media only screen and (min-width: 768px) {
     .hfeed .entry .entry-header {
-        margin: calc(3 * 1rem) calc(10% + 60px) calc(1rem / 2);
+        margin: 0 calc(10% + 60px) calc(1rem / 2);
     }
 }
 
