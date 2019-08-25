@@ -3848,6 +3848,19 @@ body.page .main-navigation {
     margin: 0;
 }
 
+@media only screen and (max-width: 435px) {
+    .site-title {
+        display: block;
+        width: 100%;
+    }
+
+    .site-description {
+        display: block;
+        width: 100%;
+        padding: 0.4em 1em 0 1em;
+    }
+}
+
 .site-header.featured-image {
     /* Hide overflow for overflowing featured image */
     overflow: hidden;
