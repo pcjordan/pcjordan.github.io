@@ -2216,7 +2216,7 @@ body {
     font-weight: 400;
     font-size: 1em;
     line-height: 1.8;
-    margin: 0 0 5em 0;
+    margin: 0 0 3em 0;
     text-rendering: optimizeLegibility;
 }
 
@@ -4187,7 +4187,7 @@ body.page .main-navigation {
 }
 
 .entry:first-of-type {
-    margin-top: 0;
+    margin-top: 3em;
 }
 
 .entry .entry-header {
@@ -4198,6 +4198,10 @@ body.page .main-navigation {
 @media only screen and (min-width: 768px) {
     .entry .entry-header {
         margin: 0 calc(10% + 60px) 1rem;
+    }
+
+    .entry:first-of-type {
+        margin-top: 0;
     }
 }
 
