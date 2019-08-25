@@ -5,16 +5,11 @@ tagline: Title Yet To Be Found
 plugins:
   - jekyll-seo-tag
   - jekyll-feed
-  - jekyll-paginate
-paginate: 5
 navigation:
   - url: /index.html
     title: Home
   - url: /contact.html
     title: Contact
-disqus_shortname:
-google_analytics:
-contact_email:
 exclude:
   - Gemfile
   - Gemfile.lock
