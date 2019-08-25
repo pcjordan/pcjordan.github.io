@@ -7,9 +7,9 @@ plugins:
   - jekyll-feed
 navigation:
   - url: /index.html
-    title: Home
-  - url: /contact.html
-    title: Contact
+    title: Posts
+  - url: /about.html
+    title: About
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -22,4 +22,4 @@ defaults:
       type: "posts"
     values:
       layout: "default"
-      comments: true
+      comments: false
