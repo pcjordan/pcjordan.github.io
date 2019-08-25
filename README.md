@@ -1,23 +1,23 @@
-# [Jekyll Twenty Nineteen](https://github.com/easiestpage/jekyll-twentynineteen/)
-A simple adaptation of the WordPress Twenty Nineteen theme for Jekyll websites.
+# [Philip's Blog](http://pcjordan.github.io)
 
-[Demo](https://demo.easiest.page/jekyll-twentynineteen/index.html)
+A personal blog built on [Jekyll](https://jekyllrb.com/) using a [clone](https://github.com/easiestpage/jekyll-twentynineteen) of [Wordpress's Twenty Nineteen](https://wordpress.org/themes/twentynineteen/) theme.
 
-![](https://travis-ci.org/easiestpage/jekyll-twentynineteen.svg?branch=master)
-## Features
-* Site search powered by [Simple-Jekyll-Search](https://github.com/christian-fei/Simple-Jekyll-Search)
-* Simple contact form with e-mail submissions powered by [Formspree](https://formspree.io/)
-* Google Analytics
-* Disqus commenting
+## Local Installation
 
-## Use
-Configuration options can be found in the _config.yml file.
+First, install Jekyll by
 
-## Support
-Need help or have a suggestion? [Create an issue](https://github.com/easiestpage/jekyll-twentynineteen/issues/new)
+```bash
+$ gem install bundler jekyll
+```
 
-## Maintainers
-* [Mitch MacKenzie](http://github.com/mitchmac)
+then, build the project via
 
-## License
-[GPLv2 or later](http://www.gnu.org/licenses/gpl-2.0.html)
+```bash
+$ bundle exec jekyll serve
+```
+
+and the website should be accessible under http://localhost:4000.
+
+## Hosting via GitHub Pages
+
+In order to publish this blog via GitHub Pages, just rename this repository to `your_username.github.io` and push it onto your GitHub.
