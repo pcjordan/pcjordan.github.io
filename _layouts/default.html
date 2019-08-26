@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="{{ "/assets/css/print.css?v=" | append: timestamp | relative_url }}">
     <link rel="stylesheet" href="{{ "/assets/css/custom.css?v=" | append: timestamp | relative_url }}">
     <link rel="stylesheet" href="{{ "/assets/css/jquery-packed-img-strip.css?v=" | append: timestamp | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/photoswipe/photoswipe.css?v=" | append: timestamp | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/photoswipe/default-skin/default-skin.css?v=" | append: timestamp | relative_url }}">
     {% seo %}
 </head>
 <body class="post-template-default single single-post single-format-standard wp-embed-responsive singular image-filters-enabled">
@@ -46,6 +48,53 @@
 
 </div><!-- #page -->
 
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. PhotoSwipe keeps only 3 of them in the DOM to save memory. Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!-- Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script src="{{ "/assets/js/priority-menu.js?v=" | append: timestamp | relative_url }}"></script>
 <script src="{{ "/assets/js/touch-keyboard-navigation.js?v=" | append: timestamp | relative_url }}"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
@@ -53,6 +102,82 @@
 <script>
     $(window).on('load', function() {
         $("div.pack").pack();
+    });
+</script>
+<script src="{{ "/assets/photoswipe/photoswipe.min.js?v=" | append: timestamp | relative_url }}"></script>
+<script src="{{ "/assets/photoswipe/photoswipe-ui-default.min.js?v=" | append: timestamp | relative_url }}"></script>
+<script>
+    var isActive = false;
+
+    $('.my-gallery').each(function () {
+        var $pic = $(this),
+            getItems = function () {
+                var items = [];
+                $pic.find('a').each(function () {
+                    var $href = $(this).attr('href'),
+                        $size = $(this).data('size').split('x'),
+                        $width = $size[0],
+                        $height = $size[1];
+
+                    var item = {
+                        src: $href,
+                        w: $width,
+                        h: $height
+                    }
+
+                    items.push(item);
+                });
+                return items;
+            }
+        var items = getItems();
+
+        var $pswp = $('.pswp')[0];
+        $pic.on('click', 'figure', function (event) {
+            event.preventDefault();
+
+            var $index = $(this).index('figure');
+            var options = {
+                index: $index,
+                bgOpacity: 0.9,
+                showHideOpacity: true
+            }
+
+            // Initialize PhotoSwipe
+            var lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
+            lightBox.init();
+            isActive = true;
+
+            // hide header and drawer
+            document.getElementById('header').style.display = "none";
+            document.getElementById('drawer').style.display = "none";
+            document.getElementsByTagName('main')[0].style.marginLeft = "0";
+            if (matchMedia) {
+                const mq = window.matchMedia("(min-width: 1025px)");
+                mq.addListener(widthChange);
+            }
+
+            // remove scrollbar
+            $("<style id='removes_scrollbar' type='text/css'> body::-webkit-scrollbar {width: 0 !important;} </style>").appendTo("head");
+
+            lightBox.listen('destroy', function () {
+                isActive = false;
+                if (matchMedia) {
+                    const mq = window.matchMedia("(min-width: 1025px)");
+                    if (!mq.matches) {
+                        document.getElementById('drawer').style.display = "flex";
+                    }
+                }
+
+                // add scrollbar back again by removing added style text-align
+                $('#removes_scrollbar').remove();
+            });
+
+            function widthChange(mq) {
+                if (!isActive) {
+                    location.reload();
+                }
+            }
+        });
     });
 </script>
 
