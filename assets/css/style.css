@@ -4400,7 +4400,7 @@ body.page .main-navigation {
     word-wrap: break-word;
 }
 
-.entry .entry-content p .first {
+.entry .entry-content p:first-child {
     margin-top: 0;
 }
 
