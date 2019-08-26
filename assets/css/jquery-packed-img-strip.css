@@ -1,0 +1,33 @@
+div.pack {
+  display: flex;
+  margin-bottom: 10px;
+  /*box-sizing: border-box;*/
+}
+
+div.pack > * {
+  margin: 0;
+}
+
+div.pack > *:not(:last-child) {
+  margin-right: 10px;
+}
+
+div.pack img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 560px) {
+  div.pack {
+    flex-wrap: wrap;
+  }
+  div.pack > * {
+    flex: 1 0 auto !important;
+    max-width: 100%;
+    margin: 0 !important;
+  }
+  div.pack > *:not(:last-child) {
+    margin-bottom: 10px !important;
+  }
+
+}

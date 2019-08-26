@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    {% assign timestamp = site.time | date: '%s' %}<link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: timestamp | relative_url }}">
+    {% assign timestamp = site.time | date: '%s' %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: timestamp | relative_url }}">
     <link rel="stylesheet" href="{{ "/assets/css/print.css?v=" | append: timestamp | relative_url }}">
     <link rel="stylesheet" href="{{ "/assets/css/custom.css?v=" | append: timestamp | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/css/jquery-packed-img-strip.css?v=" | append: timestamp | relative_url }}">
     {% seo %}
-    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="{{ "/feed.xml" | absolute_url }}">
 </head>
 <body class="post-template-default single single-post single-format-standard wp-embed-responsive singular image-filters-enabled">
 <div id="page" class="site">
@@ -47,6 +48,19 @@
 
 <script src="{{ "/assets/js/priority-menu.js?v=" | append: timestamp | relative_url }}"></script>
 <script src="{{ "/assets/js/touch-keyboard-navigation.js?v=" | append: timestamp | relative_url }}"></script>
-<script src="{{ "/assets/js/script.js?v=" | append: timestamp | relative_url }}"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="{{ "/assets/js/jquery-packed-img-strip.js?v=" | append: timestamp | relative_url }}"></script>
+<script>
+    $(window).on('load', function() {
+        $("div.pack").pack();
+    });
+</script>
+
+<style>
+    .pack {
+        width: 100%;
+    }
+</style>
+
 </body>
 </html>
