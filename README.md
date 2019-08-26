@@ -24,10 +24,12 @@ In order to publish this blog via GitHub Pages, just rename this repository to `
 
 ## As soon as posts are available
 
-Add the following to `index.html`:
+Add the following to `index.html`
 
 ```ruby
 {% for post in site.posts %}
     {% include post.html %}
 {% endfor %}
 ```
+
+and change `is_index` to `true`.
