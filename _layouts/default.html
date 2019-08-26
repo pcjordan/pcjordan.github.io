@@ -133,9 +133,11 @@
         var items = getItems();
 
         var $pswp = $('.pswp')[0];
-        $pic.on('click', 'figure', function (event) {
+        $pic.on('click', 'a', function (event) {
             event.preventDefault();
 
+            console.log($(this));
+            console.log($(this).parent('figure'));
             var $index = $(this).parent('figure').index();
             console.log("Index is " + $index);
 
