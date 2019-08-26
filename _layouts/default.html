@@ -136,6 +136,8 @@
         $pic.on('click', 'figure', function (event) {
             event.preventDefault();
 
+            console.log(event.target);
+            console.log($(event.target).parent());
             var $index = $(event.target).parent().index('figure');
             console.log("Index is " + $index);
             var options = {
