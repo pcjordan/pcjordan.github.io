@@ -137,56 +137,27 @@
             event.preventDefault();
 
             var $index = $(this).index('figure');
+            console.log("Index is " + $index);
             var options = {
                 index: $index,
                 bgOpacity: 0.9,
                 showHideOpacity: true
             }
 
-            // Initialize PhotoSwipe
+            // initialize PhotoSwipe
             var lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
             lightBox.init();
             isActive = true;
-
-            // hide header and drawer
-            document.getElementById('header').style.display = "none";
-            document.getElementById('drawer').style.display = "none";
-            document.getElementsByTagName('main')[0].style.marginLeft = "0";
-            if (matchMedia) {
-                const mq = window.matchMedia("(min-width: 1025px)");
-                mq.addListener(widthChange);
-            }
 
             // remove scrollbar
             $("<style id='removes_scrollbar' type='text/css'> body::-webkit-scrollbar {width: 0 !important;} </style>").appendTo("head");
 
             lightBox.listen('destroy', function () {
-                isActive = false;
-                if (matchMedia) {
-                    const mq = window.matchMedia("(min-width: 1025px)");
-                    if (!mq.matches) {
-                        document.getElementById('drawer').style.display = "flex";
-                    }
-                }
-
                 // add scrollbar back again by removing added style text-align
                 $('#removes_scrollbar').remove();
             });
-
-            function widthChange(mq) {
-                if (!isActive) {
-                    location.reload();
-                }
-            }
         });
     });
 </script>
-
-<style>
-    .pack {
-        width: 100%;
-    }
-</style>
-
 </body>
 </html>
