@@ -4400,6 +4400,10 @@ body.page .main-navigation {
     word-wrap: break-word;
 }
 
+.entry .entry-content p .first {
+    margin-top: 0;
+}
+
 .entry .entry-content .more-link {
     transition: color 110ms ease-in-out;
     display: inline;
