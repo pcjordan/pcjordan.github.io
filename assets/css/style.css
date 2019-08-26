@@ -2626,14 +2626,14 @@ input[type="submit"] {
     vertical-align: bottom;
 }
 
-.button:hover,
+/* .button:hover,
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
     background: #111;
     cursor: pointer;
-}
+} */
 
 .button:visited,
 button:visited,
@@ -2644,7 +2644,7 @@ input[type="submit"]:visited {
     text-decoration: none;
 }
 
-.button:focus,
+/* .button:focus,
 button:focus,
 input[type="button"]:focus,
 input[type="reset"]:focus,
@@ -2652,7 +2652,7 @@ input[type="submit"]:focus {
     background: #111;
     outline: thin dotted;
     outline-offset: -4px;
-}
+} */
 
 input[type="text"],
 input[type="email"],
