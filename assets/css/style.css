@@ -6400,3 +6400,23 @@ svg {
 .gallery-item > div > a:focus {
     box-shadow: 0 0 0 2px #41a800;
 }
+
+/* own font size adjustment */
+
+@media only screen and (max-width: 450px) {
+    .entry .entry-content {
+        font-size: 0.7em;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .entry .entry-content {
+        font-size: 0.8em;
+    }
+}
+
+@media only screen and (max-width: 1320px) {
+    .entry .entry-content {
+        font-size: 0.9em;
+    }
+}
