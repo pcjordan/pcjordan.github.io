@@ -1,5 +1,6 @@
 _site/
 _posts/*-test.html
+photos/resized
 .idea/
 Gemfile.lock
 .DS_Store
