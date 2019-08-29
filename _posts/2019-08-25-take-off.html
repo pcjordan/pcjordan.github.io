@@ -13,7 +13,8 @@ title: Take-Off
     in the original.</p>
 
 <figure class="wp-block-image alignfull">
-    {% responsive_image path: photos/w.jpg %}
+    {% picture photos/w.jpg %}
+    <!-- <img src="{{ "/photos/w.jpg" | relative_url }}" sizes="(max-width: 1024px) 100vw, 1024px"> -->
 </figure>
 
 <p>In a professional context it often happens that private or corporate clients corder a publication to be made and
@@ -27,17 +28,17 @@ title: Take-Off
 <div class="pack my-gallery">
     <figure>
         <a href="{{ "/photos/h1.jpg" | relative_url }}" itemprop="contentUrl" data-size="4048x3036">
-            {% responsive_image path: photos/h1.jpg itemprop="thumbnail" %}
+            <img src="{{ "/photos/h1.jpg" | relative_url }}" itemprop="thumbnail">
         </a>
     </figure>
     <figure>
         <a href="{{ "/photos/v1.jpg" | relative_url }}" itemprop="contentUrl" data-size="3036x4048">
-            {% responsive_image path: photos/v1.jpg itemprop="thumbnail" %}
+            <img src="{{ "/photos/v1.jpg" | relative_url }}" itemprop="thumbnail">
         </a>
     </figure>
     <figure>
         <a href="{{ "/photos/h2.jpg" | relative_url }}" itemprop="contentUrl" data-size="4048x3036">
-            {% responsive_image path: photos/h2.jpg itemprop="thumbnail" %}
+            <img src="{{ "/photos/h2.jpg" | relative_url }}" itemprop="thumbnail">
         </a>
     </figure>
 </div>
@@ -50,7 +51,7 @@ title: Take-Off
     literature, a term of remarkably low frequency in that literary corpus.</p>
 
 <figure>
-    {% responsive_image path: photos/lake.jpg %}
+    <img src="{{ site.url }}/photos/lake.jpg">
 </figure>
 
 <p>Cicero famously orated against his political opponent Lucius Sergius Catilina. Occasionally the first Oration against
@@ -59,7 +60,7 @@ title: Take-Off
     yours mock us?)</p>
 
 <figure class="wp-block-image alignfull">
-    {% responsive_image path: photos/p.jpg %}
+    <img src="{{ "/photos/p.jpg" | relative_url }}" sizes="(max-width: 1024px) 100vw, 1024px">
 </figure>
 
 <p>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam
@@ -70,22 +71,22 @@ title: Take-Off
 <div class="pack my-gallery">
     <figure>
         <a href="{{ "/photos/v2.jpg" | relative_url }}" itemprop="contentUrl" data-size="3036x4048">
-            {% responsive_image path: photos/v2.jpg itemprop="thumbnail" %}
+            <img src="{{ "/photos/v2.jpg" | relative_url }}" itemprop="thumbnail">
         </a>
     </figure>
     <figure>
         <a href="{{ "/photos/h3.jpg" | relative_url }}" itemprop="contentUrl" data-size="4048x3036">
-            {% responsive_image path: photos/h3.jpg itemprop="thumbnail" %}
+            <img src="{{ "/photos/h3.jpg" | relative_url }}" itemprop="thumbnail">
         </a>
     </figure>
     <figure>
         <a href="{{ "/photos/h4.jpg" | relative_url }}" itemprop="contentUrl" data-size="4048x3036">
-            {% responsive_image path: photos/h4.jpg itemprop="thumbnail" %}
+            <img src="{{ "/photos/h4.jpg" | relative_url }}" itemprop="thumbnail">
         </a>
     </figure>
     <figure>
         <a href="{{ "/photos/lake.jpg" | relative_url }}" itemprop="contentUrl" data-size="4048x3036">
-            {% responsive_image path: photos/lake.jpg itemprop="thumbnail" %}
+            <img src="{{ "/photos/lake.jpg" | relative_url }}" itemprop="thumbnail">
         </a>
     </figure>
 </div>

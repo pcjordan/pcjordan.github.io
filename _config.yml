@@ -5,55 +5,12 @@ tagline: Title Yet To Be Found
 plugins:
   - jekyll-seo-tag
   - jekyll-feed
-  - jekyll-responsive-image
 
 navigation:
   - url: /index.html
     title: Posts
   - url: /about.html
     title: About
-
-
-responsive_image:
-  template: _includes/responsive-image.html
-  
-  # [Optional, Default: []]
-  # An array of resize configuration objects. Each object must contain at least
-  # a `width` value.
-  sizes:
-    - width: 480
-    - width: 800
-    - width: 1400
-
-  # [Optional, Default: false]
-  # Rotate resized images depending on their EXIF rotation attribute. Useful for
-  # working with JPGs directly from digital cameras and smartphones
-  auto_rotate: false
-
-  # [Optional, Default: false]
-  # Strip EXIF and other JPEG profiles. Helps to minimize JPEG size and win friends
-  # at Google PageSpeed.
-  strip: true
-
-  # [Optional, Default: assets]
-  # The base directory where assets are stored. This is used to determine the
-  # `dirname` value in `output_path_format` below.
-  base_path: photos
-
-  # [Optional, Default: assets/resized/%{filename}-%{width}x%{height}.%{extension}]
-  # The template used when generating filenames for resized images. Must be a
-  # relative path.
-  #
-  # Parameters available are:
-  #   %{dirname}     Directory of the file relative to `base_path` (assets/sub/dir/some-file.jpg => sub/dir)
-  #   %{basename}    Basename of the file (assets/some-file.jpg => some-file.jpg)
-  #   %{filename}    Basename without the extension (assets/some-file.jpg => some-file)
-  #   %{extension}   Extension of the file (assets/some-file.jpg => jpg)
-  #   %{width}       Width of the resized image
-  #   %{height}      Height of the resized image
-  #
-  output_path_format: photos/resized/%{width}/%{basename}
-
 
 exclude:
   - Gemfile
