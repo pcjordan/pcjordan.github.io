@@ -21,15 +21,3 @@ and the website should be accessible under http://localhost:4000.
 ## Hosting via GitHub Pages
 
 In order to publish this blog via GitHub Pages, just rename this repository to `your_username.github.io` and push it onto your GitHub.
-
-## As soon as posts are available
-
-Add the following to `index.html`
-
-```ruby
-{% for post in site.posts %}
-    {% include post.html %}
-{% endfor %}
-```
-
-and change `is_index` to `true`.
