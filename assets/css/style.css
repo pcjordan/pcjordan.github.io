@@ -3848,7 +3848,7 @@ body.page .main-navigation {
     margin: 0;
 }
 
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 525px) {
     .site-title {
         display: block;
         width: 100%;
@@ -3858,6 +3858,7 @@ body.page .main-navigation {
         display: block;
         width: 100%;
         padding: 0.4em 0 0 0;
+        font-size: 1em;
     }
 }
 
