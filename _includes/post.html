@@ -11,9 +11,9 @@
     <div class="entry-content">
         {% if page.is_index %}
             {{ post.excerpt | strip_html | truncatewords: 32 }}
+            <a href="{{ post.url | relative_url }}" style="color: #41a800; font-family: sans-serif; font-weight: 700">(read more)</a>
         {% else %}
             {{ content }}
         {% endif %}
-        <a href="{{ post.url | relative_url }}" style="color: #41a800; font-family: sans-serif; font-weight: 700">(read more)</a>
     </div><!-- .entry-content -->
 </article>
