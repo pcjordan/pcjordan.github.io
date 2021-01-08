@@ -1,6 +1,6 @@
 url: https://pcjordan.github.io
 title: Philip's Blog
-tagline: Stories Of A Nerd At Princeton
+tagline: Subtitle
 
 plugins:
   - jekyll-seo-tag
